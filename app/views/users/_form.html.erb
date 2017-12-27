@@ -1,0 +1,15 @@
+<h2>New User</h2>
+<div class='field'>
+<%= form_for(@user) do |f| %>
+  <%= f.text_field :name, placeholder: 'Name' %> <br>
+  <%= f.text_field :height, placeholder: 'Height (in inches)' %> <br>
+  <%= f.number_field :happiness, placeholder: 'How happy are you? 1-5 scale.' %> <br>
+  <%= f.number_field :nausea, placeholder: 'How nauseous are you? 1-5 scale.' %> <br>
+  <%= f.number_field :tickets, placeholder: 'How many dollars are in your pocket?' %> <br>
+  <%= f.text_field :password, placeholder: 'Password' %> <br>
+  <%= f.label :admin, "Please check the box if you're a theme park owner." %>
+  <%= f.check_box :admin %> <br>
+  <%= f.submit %> <br>
+  <%= link_to 'Back', root_path %>
+<% end %>
+</div>
